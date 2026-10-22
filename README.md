@@ -1,14 +1,17 @@
-# CALI TIMER v1.4
+# CALI TIMER v1.6 — Installable iPhone PWA
 
-Mobile-first calisthenics workout timer. Upload `index.html` to the repository root on GitHub Pages.
+Includes the v1.5 workout app plus home-screen icon, fullscreen standalone display, web app manifest and offline caching.
 
-## v1.4 audio changes
-- Reworked countdown ticks to be longer and easier to hear on phone speakers.
-- Distinct work start/end tones.
-- Five more differentiated sound levels; new installations default to 5. Existing saved sound settings are preserved.
-- Separate Test Countdown and Test Transition buttons in Settings.
+## Deploy on GitHub Pages
+Upload **all seven files** in this folder to the root of the repository `calitimer/calitimer.github.io` (or your current Pages repository), then enable Pages from `main` / `(root)`.
 
-All existing workout programs, history, and notes remain stored locally in the same browser storage keys. Export backups regularly. iPhone media volume and Safari audio policies still apply.
+## Install on iPhone
+1. Open the live website in **Safari** (not the GitHub app or an in-app browser).
+2. Tap **Share** → **Add to Home Screen** → **Add**.
+3. Launch CALI TIMER using the new home screen icon.
 
-## v1.5 audio boost
-All five sound levels use stronger mixed-frequency tones and a 3× pre-compressor gain boost. The compressor limits clipping, so perceived loudness cannot be guaranteed to triple on every phone.
+## Data migration warning
+Workouts and notes use localStorage and are tied to the website origin and sometimes the standalone app's storage container. Before changing domains or switching from Safari to the home-screen app, export a backup from the existing app. Open the installed app and import the backup. Verify notes and history before deleting anything.
+
+## Limitations
+Offline use works after the site has loaded and cached successfully at least once online. Browser storage may be cleared by the operating system, so keep JSON backups. iOS may pause JavaScript timers and audio when the screen locks; PWA installation does not guarantee background audio. This is not an App Store app.
