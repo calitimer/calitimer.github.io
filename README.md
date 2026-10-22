@@ -15,3 +15,4 @@ Workouts and notes use localStorage and are tied to the website origin and somet
 
 ## Limitations
 Offline use works after the site has loaded and cached successfully at least once online. Browser storage may be cleared by the operating system, so keep JSON backups. iOS may pause JavaScript timers and audio when the screen locks; PWA installation does not guarantee background audio. This is not an App Store app.
+
